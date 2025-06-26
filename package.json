@@ -2,16 +2,20 @@
   "name": "devburger-api",
   "version": "1.0.0",
   "description": "Devburger",
-  "main": "index.js",
+  "main": "src/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon"
   },
   "author": {
-    "name": "Camylla Vitoria",
+    "name": "Camylla Alves",
     "url": "https://github.com/camylla14"
   },
   "license": "ISC",
   "dependencies": {
     "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10",
+    "sucrase": "^3.35.0"
   }
 }
