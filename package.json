@@ -1,0 +1,17 @@
+{
+  "name": "devburger-api",
+  "version": "1.0.0",
+  "description": "Devburger",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": {
+    "name": "Camylla Vitoria",
+    "url": "https://github.com/camylla14"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
