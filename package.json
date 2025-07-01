@@ -4,7 +4,8 @@
   "description": "Devburger",
   "main": "src/server.js",
   "scripts": {
-    "dev": "nodemon"
+    "dev": "nodemon",
+    "migrate": "sequelize-cli db:migrate --config src/config/database.js --migrations-path src/database/migrations", "migrate:undo": "sequelize-cli db:migrate:undo --config src/config/database.js --migrations-path src/database/migrations"
   },
   "author": {
     "name": "Camylla Alves",
@@ -12,12 +13,16 @@
   },
   "license": "ISC",
   "dependencies": {
-    "express": "^5.1.0"
+    "express": "^5.1.0",
+    "pg": "^8.16.3",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.37.7"
   },
   "devDependencies": {
     "@biomejs/biome": "2.0.6",
     "eslint": "^9.29.0",
     "nodemon": "^3.1.10",
+    "sequelize-cli": "^6.6.3",
     "sucrase": "^3.35.0"
   }
 }
