@@ -1,5 +1,5 @@
 import { v4 } from 'uuid';
-import * as Yup from 'Yup';
+import * as Yup from 'yup';
 
 import User from '../models/User';
 
@@ -14,8 +14,8 @@ class UserController {
 
 		try {
 			schema.validateSync(request.body, { abortEarly: false });
-		} catch(err) {
-		return response.status(400).json({ error: err.errors })
+		} catch (err) {
+			return response.status(400).json({ error: err.errors });
 		}
 
 		const { name, email, password, admin } = request.body;
@@ -27,9 +27,8 @@ class UserController {
 		});
 
 		if (userExists) {
-			return response.status(400).json({ error: 'User already exists' })
+			return response.status(400).json({ error: 'User already exists' });
 		}
-
 
 		const user = await User.create({
 			id: v4(),
