@@ -32,7 +32,7 @@ class SessionController {
 			emailOrPasswordIncorrect();
 		}
 
-		const isSamePassword = await user.checkPassword(password);
+		const isSamePassword = await user.comparePassword(password);
 
 		if (!isSamePassword) {
 			emailOrPasswordIncorrect();
